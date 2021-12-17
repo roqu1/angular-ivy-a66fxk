@@ -1,0 +1,14 @@
+<table class="table table-dark table-borderless table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Aufgabe</th>
+      <th>Termin/Frist</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let t of toDos" [class.toDoDone]="t.done" (click)="toggle(t)">
+      <td>{{ t.description }}</td>
+      <td>{{ t.deadline }}</td>
+    </tr>
+  </tbody>
+</table>
